@@ -92,7 +92,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.printToConsole();
   }
 
-  wydrukujSekcjeZTablekami(): string {
+  wydrukujSekcjeZTabelkami(): string {
     let wyjsciowyHtml: string = '';
 
     this.sekcjaZTabelkami.forEach(sekcja => {
@@ -102,7 +102,7 @@ export class AppComponent implements OnInit, OnDestroy {
           <th>Nazwa</th><th>Kategoria</th><th>Cena za sztukę</th><th>Ilość</th><th>Cena</th>
         </tr></thead><tbody>`;
 
-        sekcja.wiersze.forEach(wiersz => {
+        sekcja.wiersze.forEach((wiersz, indeks, wiersze) => {
           wyjsciowyHtml += `
             <tr>
               <td>${wiersz.nazwa}</td>
@@ -112,9 +112,10 @@ export class AppComponent implements OnInit, OnDestroy {
               <td>${wiersz.cena.toFixed(2)}</td>
             </tr>
           `;
+          if (indeks === wiersze.length - 1) {
+            wyjsciowyHtml += `</tbody><tfoot>Suma zakupów : 12.50</tfoot></table>`;
+          }
         });
-
-      wyjsciowyHtml += `</tbody></table>`;
     });
 
     return wyjsciowyHtml;
@@ -127,7 +128,7 @@ export class AppComponent implements OnInit, OnDestroy {
     console.info(`<div class="adresaci">${this.wydrukujSekcjeAdresatow()}</div>`);
     console.info(`<div class="tytul-pisma"><p>${this.tytulPisma}</p></div>`);
     console.info(`<div class="tresc-pisma"><p>${this.trescPisma}</p></div>`);
-    console.info(`<div class="sekcja-z-tabelkami">${this.wydrukujSekcjeZTablekami()}</div>`);
+    console.info(`<div class="sekcja-z-tabelkami">${this.wydrukujSekcjeZTabelkami()}</div>`);
     console.info(`<div class="podpis-nadawcy">
       <p>${this.podpisNadawcy.nazwa}</p>
       <p>${this.podpisNadawcy.stanowisko}</p>

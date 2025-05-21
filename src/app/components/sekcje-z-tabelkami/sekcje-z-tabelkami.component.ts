@@ -74,4 +74,16 @@ export class SekcjeZTabelkamiComponent {
     }
   }
 
+  obliczSumeZakupow(wierszeSekcji: Wiersz[]): number {
+    let suma = 0;
+
+    if (wierszeSekcji) {
+        wierszeSekcji.forEach(wiersz => {
+        suma += wiersz.cena;
+      });
+    }
+
+    return suma;
+  }
+
 }

@@ -25,7 +25,10 @@
       <td><button (click)="usunWiersz(sekcja.naglowek, wiersz)">Usuń wiersz</button></td>
     </tr>
   </tbody>
-  <tfoot><button (click)="dodajWiersz(sekcja.naglowek)">Dodaj wiersz</button></tfoot>
+  <tfoot>
+    <p>Suma zakupów : {{ obliczSumeZakupow(sekcja.wiersze) }}</p>
+    <button (click)="dodajWiersz(sekcja.naglowek)">Dodaj wiersz</button>
+  </tfoot>
 </table>
 
 <input type="text" [(ngModel)]="naglowek" placeholder="Nagłówek sekcji">
