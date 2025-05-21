@@ -34,4 +34,4 @@ Jak używać konwertera na Windows ?
 (2) 
 	Z linii komend w tym katalogu napisz :
 
-	weasyprint-windows\dist\weasyprint -s style-css.css startowy-plik-z-css.html <SCIEZKA_DO_PLIKU>\wyjsciowy-plik.pdf
+	weasyprint-windows\dist\weasyprint -s style-css.css -e utf-8 startowy-plik-z-css.html <SCIEZKA_DO_PLIKU>\wyjsciowy-plik.pdf
