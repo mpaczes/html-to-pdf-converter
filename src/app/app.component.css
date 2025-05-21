@@ -1,0 +1,55 @@
+/* styles for main element */
+body {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+  row-gap: 25px;
+	grid-template-rows: auto;
+	grid-template-areas:
+    "nadawca . miejscowosc-data"
+    ". . adresaci"
+    ". tytul-pisma ."
+    "tresc-pisma tresc-pisma tresc-pisma"
+    "sekcja-z-tabelkami sekcja-z-tabelkami sekcja-z-tabelkami"
+    ". . podpis-nadawcy"
+}
+
+.nadawca {
+	grid-area: nadawca;
+}
+
+.miejscowosc-data {
+	grid-area: miejscowosc-data
+}
+
+.adresaci {
+	grid-area: adresaci
+}
+
+.tytul-pisma {
+	grid-area: tytul-pisma;
+}
+
+.tytul-pisma-input {
+  width: 100%;
+}
+
+.tresc-pisma {
+	grid-area: tresc-pisma;
+}
+
+.sekcja-z-tabelkami {
+	grid-area: sekcja-z-tabelkami;
+}
+
+.podpis-nadawcy {
+	grid-area: podpis-nadawcy;
+}
+
+.podpis-nadawcy p {
+  margin: 0;
+}

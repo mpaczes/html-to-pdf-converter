@@ -1,0 +1,20 @@
+<div *ngIf="wybraniAdresaci" class="adresaci">
+  <div *ngFor="let adresat of wybraniAdresaci">
+    <p> {{ adresat.imie + ' ' + adresat.nazwisko }}</p>
+    <p> {{ adresat.ulica }} </p>
+    <p> {{ adresat.kodPocztowy + ' ' + adresat.miasto }} </p>
+  </div>
+</div>
+
+<div class="przyciski">
+  <select [(ngModel)]="wybranyAdresat">
+    <option *ngFor="let adresat of adresaci" [ngValue]="adresat">
+      {{ adresat.imie + ' ' + adresat.nazwisko + ', ' + adresat.ulica + ', ' + adresat.kodPocztowy + ' ' + adresat.miasto }}
+    </option>
+  </select>
+
+  <br>
+
+  <button (click)="dodajAdresata()">Dodaj adresata</button>
+  <button (click)="usunAdresata()">Usuń adresata</button>
+</div>

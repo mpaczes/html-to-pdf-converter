@@ -1,0 +1,32 @@
+
+<table *ngFor="let sekcja of sekcjeZTabelkami">
+  <caption>{{ sekcja.naglowek }}</caption>
+  <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Kategoria</th>
+      <th>Cena za sztukę</th>
+      <th>Ilość</th>
+      <th>Cena</th>
+      <th>Akcje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let wiersz of sekcja.wiersze">
+      <td><input type="text" [(ngModel)]="wiersz.nazwa"></td>
+      <td>
+        <select [(ngModel)]="wiersz.kategoria">
+          <option *ngFor="let kategoria of kategorie" [value]="kategoria">{{ kategoria }}</option>
+        </select>
+      </td>
+      <td><input type="number" [(ngModel)]="wiersz.cenaZaSztuke"></td>
+      <td><input type="number" [(ngModel)]="wiersz.ilosc" (change)="edytujWiersz(sekcja.naglowek, wiersz)"></td>
+      <td>{{ wiersz.cena }}</td>
+      <td><button (click)="usunWiersz(sekcja.naglowek, wiersz)">Usuń wiersz</button></td>
+    </tr>
+  </tbody>
+  <tfoot><button (click)="dodajWiersz(sekcja.naglowek)">Dodaj wiersz</button></tfoot>
+</table>
+
+<input type="text" [(ngModel)]="naglowek" placeholder="Nagłówek sekcji">
+<button (click)="dodajSekcje()">Dodaj sekcję</button>
