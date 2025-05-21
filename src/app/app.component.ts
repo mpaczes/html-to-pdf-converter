@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {MatSelectModule} from '@angular/material/select';
 import {FormsModule} from '@angular/forms';
 
 import { NgxEditorModule } from 'ngx-editor';
@@ -15,7 +14,6 @@ import { Sekcja, SekcjeZTabelkamiComponent, Wiersz } from "./components/sekcje-z
   imports: [
     CommonModule,
     FormsModule,
-    MatSelectModule,
     NgxEditorModule,
     AdresaciComponent,
     SekcjeZTabelkamiComponent
