@@ -9,19 +9,18 @@ import { AdresaciComponent, Adresat } from "./components/adresaci/adresaci.compo
 import { Sekcja, SekcjeZTabelkamiComponent, Wiersz } from "./components/sekcje-z-tabelkami/sekcje-z-tabelkami.component";
 
 @Component({
-  selector: 'docs-conv-root',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    NgxEditorModule,
-    AdresaciComponent,
-    SekcjeZTabelkamiComponent
-],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'docs-conv-root',
+    imports: [
+        CommonModule,
+        FormsModule,
+        NgxEditorModule,
+        AdresaciComponent,
+        SekcjeZTabelkamiComponent
+    ],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, OnDestroy {
 

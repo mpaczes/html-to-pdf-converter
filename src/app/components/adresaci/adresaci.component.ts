@@ -11,12 +11,11 @@ export interface Adresat {
 }
 
 @Component({
-  selector: 'docs-conv-adresaci',
-  standalone: true,
-  imports: [CommonModule, FormsModule ],
-  templateUrl: './adresaci.component.html',
-  styleUrls: ['./adresaci.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'docs-conv-adresaci',
+    imports: [CommonModule, FormsModule],
+    templateUrl: './adresaci.component.html',
+    styleUrls: ['./adresaci.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AdresaciComponent {
 
