@@ -19,7 +19,6 @@ export interface Wiersz {
     selector: 'docs-conv-sekcje-z-tabelkami',
     imports: [CommonModule, FormsModule],
     templateUrl: './sekcje-z-tabelkami.component.html',
-    styleUrls: ['./sekcje-z-tabelkami.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SekcjeZTabelkamiComponent {
