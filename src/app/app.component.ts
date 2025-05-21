@@ -113,7 +113,7 @@ export class AppComponent implements OnInit, OnDestroy {
             </tr>
           `;
           if (indeks === wiersze.length - 1) {
-            wyjsciowyHtml += `</tbody><tfoot>Suma zakupów : 12.50</tfoot></table>`;
+            wyjsciowyHtml += `</tbody><tfoot>Suma zakupów : ${wiersze.reduce((poprzedni, biezacy) => poprzedni + biezacy.cena, 0)}</tfoot></table>`;
           }
         });
     });
