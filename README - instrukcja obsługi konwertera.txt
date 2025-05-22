@@ -29,7 +29,7 @@ Jak używać konwertera na Windows ?
 		
 		utworzyć na stronie internetowej dokument do konwersji i otworzyć konsolę przeglądarki internetowej
 		
-		skopiować zawartość konsoli pzreglądarki do pliku 'startowy-plik-z-css.html'
+		skopiować zawartość konsoli pzreglądarki do pliku 'startowy-plik-z-css.html' (po skopiowaniu tekstu z konsoli przeglądarki należy usunąć wszystkie wpisy zaczynające się od 'app.component.ts')
 
 (2) 
 	Z linii komend w tym katalogu napisz :
